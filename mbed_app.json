@@ -1,0 +1,25 @@
+{
+    "config": {
+        "wifi-ssid": {
+            "help": "WIFI SSID",
+            "value": "\"Kupus\""
+        },
+        "wifi-password": {
+            "help": "Wifi Password",
+            "value": "\"dinarska1\""
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "platform.stdio-convert-newlines": true
+        },
+        "NUCLEO_L476RG": {
+            "target.network-default-interface-type": "WIFI",
+            "esp8266.tx"                           : "PC_4",
+            "esp8266.rx"                           : "PC_5",
+            "esp8266.provide-default"              : true,
+            "drivers.uart-serial-rxbuf-size"       : 1024,
+            "drivers.uart-serial-txbuf-size"       : 1024
+        }
+    }    
+}
