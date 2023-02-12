@@ -140,7 +140,7 @@ int main() {
   if ((rc = client.connect(data)) != 0)
     printf("rc from MQTT connect is %d\n", rc);
 
-  if ((rc = client.subscribe(topic_sub, MQTT::QOS0, messageArrived)) != 0)
+  if ((rc = client.subscribe(topic_sub_keep_alive_server, MQTT::QOS0, messageArrived)) != 0)
     printf("rc from MQTT subscribe is %d\n", rc);
 
   // Init ambient click
